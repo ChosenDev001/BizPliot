@@ -136,5 +136,9 @@ $('saveScenario').addEventListener('click',()=>{const c=calc(),units=plan.units*
 function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 loadLocal();fillForm();render();updateStress();window.addEventListener('resize',()=>{if($('dashboard').classList.contains('active'))drawChart(calc());});
 </script>
+<script type="module">
+import { inject } from 'https://cdn.jsdelivr.net/npm/@vercel/analytics@1/+esm';
+inject();
+</script>
 </body>
 </html>
